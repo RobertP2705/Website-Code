@@ -1,0 +1,354 @@
+.searchGrid{
+    display:grid;
+    width:40%;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 1fr 3fr;
+    grid-gap:5%;
+    margin-left:2%;
+    float:left;
+}
+.optionGrid{
+    display:grid;
+    position:sticky;
+    width:50%;
+    left:50%;
+    grid-template-columns:33% 33% 33%;
+    top:0%;
+    float:right;
+}
+.leftRightGrid{
+    display:grid;
+    grid-template-columns: 90% 10%;
+    justify-content:center;
+    
+}
+.leftRightGridPD{
+    display:grid;
+    grid-template-columns: 90% 10%;
+    justify-content:center;
+    margin-right:20%
+}
+.showAllButton{
+    height:5vh;
+    width:10vw;
+    border:black 2px solid;
+    font-size:1vw
+}
+
+.showAllButton:hover{
+    background-color: #CCCCCC;
+}
+.showAllButton:active{
+    background-color: grey;
+}
+.leftRightGridPL{
+    display:grid;
+    grid-template-columns: 100%;
+    justify-content:center;
+}
+.selectAllDiv > select{
+    width:100%
+}
+.mainWWGrid{
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    width:100%;
+    height:auto;
+    word-wrap: break-word;
+    word-break:break-all;
+    margin-top:1%
+}
+body{
+    overflow-x:hidden;
+}
+.mainWWGrid > div{
+    border:grey 2px solid
+}
+.PWOClassificationItem{
+    display:grid;
+    grid-template-columns: 1fr 1.5fr 2fr 4fr 2fr .9fr;
+    grid-template-rows: 1fr 3fr;
+    word-wrap:break-word;
+    word-break:break-all;
+}
+.PWOClassificationItem > :not(.titleForOperations){
+    border:grey 2px solid;
+    align-items: start;
+}
+.PWOClassificationItem > .titleForOperations{
+    display:flex;
+    border:grey 2px solid;
+    justify-content: center;
+    align-items: center;
+    font-size: .7vw;
+}
+.PWOClassificationItem > .titleForOperations{
+    background-color: lightblue;
+}
+::-webkit-scrollbar{
+    height: 2vh;
+    border-radius:8px;
+}
+ ::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius:8px;
+}
+ ::-webkit-scrollbar-thumb{
+    background-color: #a1a1a1;
+    border-radius:8px;
+    outline: 1px solid slategrey;
+}
+::-webkit-scrollbar-thumb:active{
+    background-color: grey;
+    border-radius:8px;
+    outline: 1px solid slategrey;
+}
+
+
+.containerOfOperations{
+    display:grid;
+    grid-auto-flow: column;
+    overflow-x:auto;
+    grid-auto-columns: 150px;
+    
+}
+.containerOfOperations > div{
+    border:black 4px solid
+}
+.containerOfOperations > .operationBoxes{
+    display:grid;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+.WWselectionItem{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+/*GREY*/
+.expandOperationButtonGrey{
+    background-color: lightgrey;
+}
+.WWselectionItemGrey{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.WWselectionItemGrey > select{
+    border:black 2px solid;
+    grid-column-start: span 2 ;
+    align-self:center;
+    justify-self:center;
+    background-color: lightgrey;
+    width:  95%;
+    height: 42px;
+    font-size:20px; 
+
+}
+.operationBoxesGrey{
+    display:grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    background-color: lightgrey;
+}
+
+/*GREY*/
+
+.WWselectionItem > select{
+    border:grey 2px solid;
+    grid-column-start: span 2 ;
+    align-self:center;
+    justify-self:center;
+    width:  95%;
+    height: 42px;
+    font-size:20px; 
+
+}
+.expandOperation{
+    align-self:end;
+    justify-self:left;
+    padding:5px;
+}
+.selectBoxForOperation{
+    align-self:end;
+    justify-self:right;
+    padding: 5px;
+     
+}
+.mwoSelectDiv > select{
+    width:90%;
+}
+.selectForPL > select{
+    width:115%;
+}
+.openAllButton{
+    width:10vw;
+    height:5vh;
+    border:black 2px solid;
+    font-size:1vw
+
+}
+.openAllButton:hover{
+    background-color:#CCCCCC;
+}
+.openAllButton:active{
+    background-color:grey;
+}
+
+.workCenterLabel{
+    background-color: lightblue;
+}
+.greenMWOworkCenterLabelMain{
+    background-color: rgba(69, 79, 140,.5);
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.greenMWOworkCenterLabel{
+    background-color: #F4F5E7;
+}
+
+.doneDiv{
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start:1;
+    grid-row-end:2;
+    background-color: lightblue;
+    animation-name: open;
+    animation-duration:1s;
+}
+@keyframes open{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+.saveButtonForWW{
+    background-color: #90EE90;
+    width:10vw;
+    height:5vh;
+    font-size:2vw;
+    position:fixed;
+    left:0vw;
+    top:95vh;
+}
+.saveButtonForWW:active{
+    background-color: green
+}
+.searchByPL{
+    grid-column-start: span 2
+}
+.onHoldDiv{
+    grid-column-start:2;
+    grid-column-end:3;
+    grid-row-start:1;
+    grid-row-end:2;
+    background-color: lightblue;
+    animation-name: open;
+    animation-duration:1s;
+}
+.doneCheckBox{
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start:2;
+    grid-row-end:3;
+    animation-name: open;
+    animation-duration:1s;
+}
+.PWOclassificationInput{
+    width: 2vw;
+    height:2vw;
+}
+.greenMWOworkCenterLabelMain2{
+    background-color: rgba(69, 79, 140,.5);
+}
+.doneCheckBoxInput{
+    margin-top:50%;
+    width: 2vw;
+    height:2vw;
+    animation-name: open;
+    animation-duration:1s;
+}
+.onHoldCheckBoxInput{
+    margin-top:50%;
+    width: 2vw;
+    height:2vw;
+    animation-name: open;
+    animation-duration:1s;
+}
+.onHoldCheckBox{
+    grid-column-start:2;
+    grid-column-end:3;
+    grid-row-start:2;
+    grid-row-end:3;
+}
+.writeNoteDiv{
+    grid-column-start:span 2;
+    grid-row-start:3;
+    grid-row-end:4;
+    border:grey 1px solid;
+    animation-name: open;
+    animation-duration:1s;
+}
+.MWObuttonSkipSet{
+    height:40%;
+    background-color:grey
+}
+.setAllGrid{
+    display:grid;
+    border:#333 2px solid;
+    background-color:white;
+}
+.notesButton{
+    width:100%;
+    height:100%;
+    position:fixed;
+    text-decoration:none;
+    background-color:grey;
+    left:0%;
+    top:0%;
+}
+.notesGrid{
+    display:grid;
+    width:500px;
+    height:200px;
+    opacity:1;
+    position:fixed;
+    left:40%;
+    top:40%;
+    margin:-250px 0 0 -100px;
+    background-color:white;
+    border:#333 2px solid;
+    
+}
+.notesInput{
+    width:495px;
+    height:100px;
+}
+.MWOsearchGrid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    width:100vw;
+}
+.MWOsearchGrid >div{
+    border: grey 2px solid;
+}
+.MWOtext{
+    font-size:1.5vw
+}
+.MWObuttonSetAll{
+    width:60%;
+    height:40%;
+    font-size:1vw;
+}
+.operationNumbers{
+    border:grey 1px solid
+}
+div#mask{
+    width:100%;
+    height:100%;
+    z-index: 999;
+    cursor: wait;
+    position:fixed;
+    top:0%;
+    left:0%;
+    text-align: center;
+    font-size: 5vw;
+    justify-content: center;
+    color:#90EE90;
+    background-color:rgba(0,0,0,.5)
+}
